@@ -1,6 +1,6 @@
 <template>
   <NavCreateTable />
-  <div class="row mycontent-top">
+  <div class="row mycontent-top h-100">
     <div class="col-md-7 mycontent-left nopadding">
       <h1 class="mx-5 my-2 h4 fw-normal">Items</h1>
       <div class="mycontent-top table-area h-100">
@@ -145,6 +145,9 @@ export default {
 </script>
 
 <style>
+#app {
+  height: 100vh;
+}
 table,
 thead,
 tr {

@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-md">
-    <div class="container-fluid">
-      <h1 class="h5">638772765</h1>
+    <div class="container-fluid mx-3">
+      <h1 class="h4 fw-normal">638772765</h1>
       <div>
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">

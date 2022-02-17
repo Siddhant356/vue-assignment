@@ -8,8 +8,8 @@
         <br />
         <h1 class="h5 mb-3 fw-normal">Atma Nirbhar Vyapaari bane</h1>
       </div>
-      <div class="card card-body col-3">
-        <form @submit.prevent="getOtp(false)" class="p-5">
+      <div class="card col-3">
+        <form @submit.prevent="getOtp(false)" class="p-3">
           <h1 class="h3 mb-3 fw-normal">Login to myBillBook</h1>
           <div class="form-group p-2 w-100">
             <label for="basic-addon1">Enter Mobile Number</label>
@@ -41,8 +41,8 @@
       </div>
     </div>
     <div>
-      Made with ❤️ &nbsp; in India &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-        ><img src="/static/media/iso-black.2c2c44d1.svg" alt="iso logo"
+      Made with ❤️ in India &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+        ><img src="https://mybillbook.in/static-assets/images/landing-page/iso-black.webp" alt="iso logo"
       /></span>
     </div>
   </div>

@@ -24,51 +24,44 @@
           <h3>Now try all benefits of My BillBook app</h3>
           <h3 class="orange">Free for 14 days</h3>
         </div>
-        <div class="pb-3"><img src="/static/media/guarenty.56cbfccf.png" height="100" alt="money logo" /></div>
+        <div class="pb-3"><img src="" height="100" alt="money logo" /></div>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-md-3 mb-3 mx-5">
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm px-2">
-          <span class="h1 silver">✷</span>
-          <h1 class="h5">Silver Plan</h1>
-          <div><del>₹ 1299 </del><span class="h2 silver">₹ 799</span><span>/year</span></div>
-          <div class="text-center h6 p-2 mt-2 silver silver-background">Mobile+Desktop</div>
+    <div class="d-flex mb-3 mx-5">
+      <div class="card mb-4 col-4 rounded-3 shadow-sm px-2 mx-2">
+        <span class="h1 silver">✷</span>
+        <h1 class="h5">Silver Plan</h1>
+        <div><del>₹ 1299 </del><span class="h2 silver">₹ 799</span><span>/year</span></div>
+        <div class="text-center h6 p-2 mt-2 silver silver-background">Mobile+Desktop</div>
 
-          <p><span class="fa fa-lg fa-check text-success"></span> Unlimited Stock Adustments</p>
-          <p><span class="fa fa-lg fa-check text-success"></span> GST Reports, Profit &amp; Loss Report</p>
-          <p><span class="fa fa-lg fa-check text-success"></span> Remove MyBillBook logo from Invoice</p>
-          <p><span class="fa fa-lg fa-check text-success"></span> Only Mobile device supported</p>
-          <p><span class="fa fa-lg fa-check text-success"></span> + 5 more features</p>
-        </div>
+        <p><span class="fa fa-lg fa-check text-success"></span> Unlimited Stock Adustments</p>
+        <p><span class="fa fa-lg fa-check text-success"></span> GST Reports, Profit &amp; Loss Report</p>
+        <p><span class="fa fa-lg fa-check text-success"></span> Remove MyBillBook logo from Invoice</p>
+        <p><span class="fa fa-lg fa-check text-success"></span> Only Mobile device supported</p>
+        <p><span class="fa fa-lg fa-check text-success"></span> + 5 more features</p>
       </div>
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm px-2 border-warning">
-          <span class="h1 gold">✷</span>
-          <h1 class="h5">Gold Plan</h1>
-          <div><del>₹ 1299 </del><span class="h2 gold">₹ 799</span><span>/year</span></div>
-          <div class="text-center h6 p-2 mt-2 gold gold-background">Mobile+Desktop</div>
+      <div class="card mb-4 col-4 rounded-3 shadow-sm px-2 border-warning">
+        <div class="popular"><h1 class="h6 populartag">Most Popular</h1></div>
+        <span class="h1 gold">✷</span>
+        <h1 class="h5">Gold Plan</h1>
+        <div><del>₹ 2599 </del><span class="h2 gold">₹ 1799</span><span>/year</span></div>
+        <div class="text-center h6 p-2 mt-2 gold gold-background">Mobile+Desktop</div>
 
-          <p><span class="fa fa-lg fa-check text-success"></span> Unlimited Stock Adustments</p>
-          <p><span class="fa fa-lg fa-check text-success"></span> GST Reports, Profit &amp; Loss Report</p>
-          <p><span class="fa fa-lg fa-check text-success"></span> Remove MyBillBook logo from Invoice</p>
-          <p><span class="fa fa-lg fa-check text-success"></span> Only Mobile device supported</p>
-          <p><span class="fa fa-lg fa-check text-success"></span> + 5 more features</p>
-        </div>
+        <p><span class="fa fa-lg fa-check text-success"></span> All Silver Feature</p>
+        <p><span class="fa fa-lg fa-check text-success"></span> Add <b>upto 5 Staff</b> to My BillBook</p>
+        <p><span class="fa fa-lg fa-check text-success"></span> Unlimted Mobile + Desktop Logins</p>
       </div>
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm px-2">
-          <span class="h1 diamond">✷</span>
-          <h1 class="h5">Silver Plan</h1>
-          <div><del>₹ 1299 </del><span class="h2 diamond">₹ 799</span><span>/year</span></div>
-          <div class="text-center h6 p-2 mt-2 diamond diamond-background">Mobile+Desktop</div>
+      <div class="card mb-4 col-4 rounded-3 shadow-sm px-2 mx-2">
+        <span class="h1 diamond">✷</span>
+        <h1 class="h5">Silver Plan</h1>
+        <div><del>₹ 1299 </del><span class="h2 diamond">₹ 799</span><span>/year</span></div>
+        <div class="text-center h6 p-2 mt-2 diamond diamond-background">Mobile+Desktop</div>
 
-          <p><span class="fa fa-lg fa-check text-success"></span> Unlimited Stock Adustments</p>
-          <p><span class="fa fa-lg fa-check text-success"></span> GST Reports, Profit &amp; Loss Report</p>
-          <p><span class="fa fa-lg fa-check text-success"></span> Remove MyBillBook logo from Invoice</p>
-          <p><span class="fa fa-lg fa-check text-success"></span> Only Mobile device supported</p>
-          <p><span class="fa fa-lg fa-check text-success"></span> + 5 more features</p>
-        </div>
+        <p><span class="fa fa-lg fa-check text-success"></span> Unlimited Stock Adustments</p>
+        <p><span class="fa fa-lg fa-check text-success"></span> GST Reports, Profit &amp; Loss Report</p>
+        <p><span class="fa fa-lg fa-check text-success"></span> Remove MyBillBook logo from Invoice</p>
+        <p><span class="fa fa-lg fa-check text-success"></span> Only Mobile device supported</p>
+        <p><span class="fa fa-lg fa-check text-success"></span> + 5 more features</p>
       </div>
     </div>
   </main>
@@ -80,18 +73,14 @@
           <h1 class="h6 orange">Get in touch</h1>
           <h1 class="h6 fw-normal">help@flobiz.in</h1>
           <h1 class="h5">+91 7400417400</h1>
-          <div class="d-flex" style="gap: 9px">
-            <div class="whatsapp justify-content-around">
-              <div>
-                <a href="https://api.whatsapp.com/send?phone=917400417400" target="_blank"
-                  ><img src="/static/media/whatsapp-1.f9a947fd.svg" alt="whatsapp logo"
-                /></a>
-              </div>
-              <div class="b">WhatsApp Us</div>
-            </div>
-            <div class="chat justify-content-around">
-              <div><img src="/static/media/chat-icon.8523dc5e.svg" alt="chat logo" /></div>
-              <div class="b">Chat with us</div>
+          <div style="gap: 9px">
+            <div class="justify-content-around">
+              <a href="https://api.whatsapp.com/send?phone=917400417400" target="_blank" onclick="pushEvent('Chat', 'whatsapp')" class="text-decoration-none">
+                <div class="whatsapp">
+                  <img src="https://mybillbook.in/static-assets/images/whatsapp-1.webp" alt="whatsapp logo" loading="lazy" />
+                  <div>&nbsp;WhatsApp us</div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -110,29 +99,24 @@
         </div>
         <div>
           <h1 class="h6 orange">Follow Us</h1>
-          <div class="links d-flex">
-            <YoutubeIcon />
-            <div class="flag">
-              <a href="https://www.youtube.com/channel/UCSGJlHTQCdQS_OGxCk6xJsw" target="_blank"
-                ><img src="/static/media/youtube.c1749e44.svg" alt="youtube logo"
-              /></a>
-            </div>
-            <div class="flag">
-              <a href="https://www.facebook.com/mybillbook.in" target="_blank"><img src="/static/media/facebook_Icon.bd1b5aa6.svg" alt="fb logo" /></a>
-            </div>
-            <div class="flag">
-              <a href="https://www.instagram.com/mybillbookofficial/" target="_blank"
-                ><img src="/static/media/instagram.8ba14494.svg" alt="instagram logo"
-              /></a>
-            </div>
-            <div class="flag">
-              <a href="https://twitter.com/FloBizOfficial" target="_blank"><img src="/static/media/twitter-icon.6536b6dd.svg" alt="twitter logo" /></a>
-            </div>
-            <div class="flag">
-              <a href="https://www.linkedin.com/company/flobiz/" target="_blank"><img src="/static/media/linkedin-icon.43ae871b.svg" alt="linkedin logo" /></a>
-            </div>
+          <div class="social-media d-flex">
+            <a class="link mr-1" onclick="pushEvent('Social links', 'youtube')" href="https://www.youtube.com/channel/UCSGJlHTQCdQS_OGxCk6xJsw" target="_blank">
+              <img src="https://mybillbook.in/static-assets/images/landing-page/youtube.webp" alt="youtube logo " loading="lazy" />
+            </a>
+            <a class="link mr-1" onclick="pushEvent('Social links', 'facebook')" href="https://www.facebook.com/mybillbook.in" target="_blank">
+              <img src="https://mybillbook.in/static-assets/images/landing-page/facebook_Icon.webp" alt="facebook logo " loading="lazy" />
+            </a>
+            <a class="link mr-1" onclick="pushEvent('Social links', 'instagram')" href="https://www.instagram.com/mybillbookofficial/" target="_blank">
+              <img src="https://mybillbook.in/static-assets/images/landing-page/instagram.webp" alt="instagram logo " loading="lazy" />
+            </a>
+            <a class="link mr-1" onclick="pushEvent('Social links', 'twitter')" href="https://twitter.com/FloBizOfficial" target="_blank">
+              <img src="https://mybillbook.in/static-assets/images/landing-page/twitter-icon.webp" alt=" twitter icon" loading="lazy" />
+            </a>
+            <a class="link" onclick="pushEvent('Social links', 'linkedin')" href="https://www.linkedin.com/company/flobiz/" target="_blank">
+              <img src="https://mybillbook.in/static-assets/images/landing-page/linkedin-icon.webp" alt=" linkedin icon " loading="lazy" />
+            </a>
           </div>
-          <div class="py-3" style="font-weight: 800">FloBooks is a product of <a href="https://flobiz.in/" target="_blank">FloBiz</a></div>
+          <div class="py-3 h6">FloBooks is a product of <a href="https://flobiz.in/" target="_blank">FloBiz</a></div>
         </div>
       </div>
     </div>
@@ -201,5 +185,44 @@ html {
 .border-warning {
   border-color: #ffc107 !important;
   border: 2px solid;
+}
+.social-media .link {
+  height: 45px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0px 1px 2px rgb(0 0 0 / 16%);
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.whatsapp {
+  display: flex;
+  background: #e7f4f2;
+  align-items: center;
+  height: 40px;
+  width: 160px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 11px;
+  color: #128c7e;
+  margin-top: 25px;
+}
+.popular {
+  position: absolute;
+  right: 10px;
+  top: -10px;
+}
+.populartag {
+  background: red;
+  width: 120px;
+  border-radius: 15%/75%;
+  height: 26px;
+  position: relative;
+
+  text-align: center;
+  padding-top: 3px;
+  color: #fff;
 }
 </style>
