@@ -1,25 +1,32 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
+import Login from '@/views/Login.vue'
+import CreateTable from '@/views/CreateTable.vue'
+
 
 const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+  { path: '/', component: Login },
+  { path: '/createTable', component: CreateTable },
+  // { path: '/:catchAll(.*)', redirect: '/' }
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+router.beforeEach((to, from) => {
+  let isAuthenticated = false;
+  if (localStorage.getItem('login'))
+    isAuthenticated = true;
+  else
+    isAuthenticated = false;
+
+  if (to.path == '/' && !isAuthenticated)
+    return true;
+  else if (to.path == '/createTable' && isAuthenticated)
+    return true;
+  else
+    return false;
 })
 
 export default router
