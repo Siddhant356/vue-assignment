@@ -5,7 +5,7 @@
       <div>
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <h1 class="nav-link h5" @click="logout">Logout</h1>
+            <h1 class="nav-link pointer h5" @click="logout">Logout</h1>
           </li>
         </ul>
       </div>
@@ -41,3 +41,9 @@ export default {
   }
 };
 </script>
+
+<style>
+.pointer {
+  cursor: pointer;
+}
+</style>

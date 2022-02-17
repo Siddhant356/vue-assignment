@@ -10,7 +10,7 @@
       </div>
       <div class="card col-3">
         <form @submit.prevent="getOtp(false)" class="p-3">
-          <h1 class="h3 mb-3 fw-normal">Login to myBillBook</h1>
+          <h1 class="h4 mb-3 fw-normal text-muted">Login to myBillBook</h1>
           <div class="form-group p-2 w-100">
             <label for="basic-addon1">Enter Mobile Number</label>
             <div class="input-group mb-4">

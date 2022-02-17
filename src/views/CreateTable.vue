@@ -2,7 +2,7 @@
   <NavCreateTable />
   <div class="row mycontent-top h-100">
     <div class="col-md-7 mycontent-left nopadding">
-      <h1 class="mx-5 my-2 h4 fw-normal">Items</h1>
+      <h1 class="mx-5 my-2 h5 fw-normal">Items</h1>
       <div class="mycontent-top table-area h-100">
         <div class="d-flex flex-column mx-5">
           <div class="form-group py-4 w-50">
@@ -11,7 +11,7 @@
           <table class="table table-bordered">
             <thead>
               <tr class="justify-content-around bg-light">
-                <th>ITEM NAME</th>
+                <th>ITEM NAME &nbsp;<button class="fa fa-sort" type="button" @click="sort"></button></th>
                 <th>ITEM CODE</th>
                 <th>SELLING PRICE</th>
                 <th>PURCHASE PRICE</th>
@@ -20,7 +20,7 @@
               </tr>
             </thead>
             <tbody class="">
-              <tr class="justify-content-around white" v-for="item in searchItems" :key="item.id">
+              <tr class="justify-content-around white" v-for="(item, index) in searchItems" :key="item.id" v-on:click="updateCell(index, item)">
                 <td>{{ item.itemName }}</td>
                 <td>{{ item.itemCode }}</td>
                 <td>₹ {{ item.sellingPrice }}</td>
@@ -34,10 +34,10 @@
       </div>
     </div>
     <div class="col-md-5 nopadding">
-      <h1 class="m-2 h4 fw-normal">Create/Edit Items</h1>
+      <h1 class="m-2 h5 fw-normal">Create/Edit Items</h1>
       <div class="mycontent-top">
         <form @submit.prevent="saveItem">
-          <div class="d-flex">
+          <div class="d-flex p-2">
             <div class="form-group p-2 w-100">
               <label for="itemname">Item Name *</label>
               <input v-model="data.item_name" class="form-control" id="itemname" name="itemName" placeholder="Enter item name" required="" />
@@ -49,7 +49,7 @@
           </div>
           <br />
           <h1 class="options h6 fw-normal bg-light">Stock &amp; Pricing details (Optional)</h1>
-          <div class="d-flex">
+          <div class="d-flex p-2">
             <div class="form-group p-2 w-100">
               <label for="salesprice">Sales Price</label>
               <input v-model="data.selling_price" class="form-control" id="salesprice" type="number" placeholder="₹0" name="sellingPrice" />
@@ -59,7 +59,7 @@
               <input v-model="data.purchase_price" class="form-control" id="purchaseprice" placeholder="₹0" type="number" name="purchasePrice" />
             </div>
           </div>
-          <div class="d-flex">
+          <div class="d-flex p-2">
             <div class="form-group p-2 w-100">
               <lable for="measuring">Measuring UNIT</lable>
               <select v-model="data.unit" class="form-select" id="measuring" name="units" placeholder="Select Unit">
@@ -76,8 +76,8 @@
               <input v-model="data.date" class="form-control" id="openingdate" type="date" placeholder="Select date" name="date" />
             </div>
           </div>
-          <div class="p-2">
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Save</button>
+          <div class="p-4">
+            <button class="w-100 btn btn-lg btn-primary" type="submit">{{ saveUpdate }}</button>
           </div>
         </form>
       </div>
@@ -95,6 +95,9 @@ export default {
 
   setup() {
     const searchQuery = ref('');
+    const saveUpdate = ref('Save');
+    const indexUpdate = ref(0);
+    const toggle = ref(true);
     const items = ref([
       { itemName: 'XYZ', itemCode: '36524', sellingPrice: '500', purchasePrice: '200', unit: '20', date: '12/07/21' },
       { itemName: 'Apple', itemCode: '36525', sellingPrice: '500', purchasePrice: '200', unit: '20', date: '12/07/21' },
@@ -111,33 +114,70 @@ export default {
     });
 
     const saveItem = () => {
-      items.value.push({
-        itemName: data.item_name,
-        itemCode: data.item_code,
-        sellingPrice: data.selling_price,
-        purchasePrice: data.purchase_price,
-        unit: data.unit,
-        date: data.date
-      });
+      if (saveUpdate.value == 'Save') {
+        items.value.push({
+          itemName: data.item_name,
+          itemCode: data.item_code,
+          sellingPrice: data.selling_price,
+          purchasePrice: data.purchase_price,
+          unit: data.unit,
+          date: data.date
+        });
+      } else {
+        items.value[indexUpdate.value] = {
+          itemName: data.item_name,
+          itemCode: data.item_code,
+          sellingPrice: data.selling_price,
+          purchasePrice: data.purchase_price,
+          unit: data.unit,
+          date: data.date
+        };
+        saveUpdate.value = 'Save';
+      }
       localStorage.setItem('items', JSON.stringify(items.value));
+    };
+
+    const updateCell = (index: any, item: any) => {
+      data.item_name = searchItems.value[index].itemName;
+      data.item_code = searchItems.value[index].itemCode;
+      data.selling_price = searchItems.value[index].sellingPrice;
+      data.purchase_price = searchItems.value[index].purchasePrice;
+      data.date = searchItems.value[index].date;
+      saveUpdate.value = 'Update';
+      indexUpdate.value = items.value.indexOf(item);
+    };
+
+    const sort = () => {
+      toggle.value = !toggle.value;
     };
     const searchItems = computed(() => {
       return items.value
         .filter((item) => {
           return item.itemName.toLowerCase().indexOf(searchQuery.value.toLowerCase()) != -1;
         })
-        .sort((a, b) => a.itemName.localeCompare(b.itemName));
+        .sort((a, b) => {
+          if (toggle.value) {
+            return a.itemName.localeCompare(b.itemName);
+          } else {
+            return b.itemName.localeCompare(a.itemName);
+          }
+        });
     });
+
     onMounted(() => {
       if (localStorage.items) {
         items.value = JSON.parse(localStorage.getItem('items') || '[]');
       }
     });
+
     return {
       data,
       saveItem,
       searchItems,
       searchQuery,
+      updateCell,
+      saveUpdate,
+      sort,
       items
     };
   }
@@ -181,5 +221,16 @@ th {
 .nopadding {
   padding: 0 !important;
   margin: 0 !important;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
 }
 </style>
