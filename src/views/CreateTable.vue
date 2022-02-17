@@ -98,12 +98,7 @@ export default {
     const saveUpdate = ref('Save');
     const indexUpdate = ref(0);
     const toggle = ref(true);
-    const items = ref([
-      { itemName: 'XYZ', itemCode: '36524', sellingPrice: '500', purchasePrice: '200', unit: '20', date: '12/07/21' },
-      { itemName: 'Apple', itemCode: '36525', sellingPrice: '500', purchasePrice: '200', unit: '20', date: '12/07/21' },
-      { itemName: 'Mango', itemCode: '36526', sellingPrice: '500', purchasePrice: '200', unit: '20', date: '12/07/21' },
-      { itemName: 'Banana', itemCode: '36527', sellingPrice: '500', purchasePrice: '200', unit: '20', date: '12/07/21' }
-    ]);
+    const items = ref([{ itemName: '', itemCode: '', sellingPrice: '', purchasePrice: '', unit: '', date: '' }]);
     const data = reactive({
       item_name: '',
       item_code: '',
@@ -152,10 +147,10 @@ export default {
     };
     const searchItems = computed(() => {
       return items.value
-        .filter((item) => {
-          return item.itemName.toLowerCase().indexOf(searchQuery.value.toLowerCase()) != -1;
+        .filter((item: any) => {
+          return item.itemName.toLowerCase().indexOf(searchQuery.value.toLowerCase()) != -1 && item.itemName != '';
         })
-        .sort((a, b) => {
+        .sort((a: any, b: any) => {
           if (toggle.value) {
             return a.itemName.localeCompare(b.itemName);
           } else {

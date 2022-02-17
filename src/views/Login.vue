@@ -11,7 +11,7 @@
       <div class="card col-3">
         <form @submit.prevent="getOtp(false)" class="p-3">
           <h1 class="h4 mb-3 fw-normal text-muted">Login to myBillBook</h1>
-          <div class="form-group p-2 w-100">
+          <div class="form-group w-100">
             <label for="basic-addon1">Enter Mobile Number</label>
             <div class="input-group mb-4">
               <div class="input-group-prepend">
@@ -22,9 +22,11 @@
                 type="number"
                 max="9999999999"
                 min="1000000000"
+                placeholder="9543625478"
                 class="form-control"
                 aria-label="Mobile No."
                 aria-describedby="basic-addon1"
+                required
               />
             </div>
           </div>
@@ -32,9 +34,9 @@
           <div v-if="showOtpInput" class="form-group w-100">
             <label for="basic-addon2">Enter OTP</label>
             <div class="input-group">
-              <input v-model="data.otp_code" type="number" class="form-control" placeholder="00-00-00" aria-label="OTP" aria-describedby="basic-addon2" />
+              <input v-model="data.otp_code" type="number" class="form-control" aria-label="OTP" aria-describedby="basic-addon2" required />
             </div>
-            <label class="text-muted mb-3" @click="getOtp(true)">Resend OTP</label>
+            <label class="text-muted mb-3 resend-btn" @click="getOtp(true)">Resend OTP in {{ interval }} sec</label>
           </div>
           <button class="w-100 btn btn-lg btn-primary" type="submit">{{ message }}</button>
         </form>
@@ -69,9 +71,10 @@ export default {
 
     const router = useRouter();
     const store = useStore();
+    const interval = ref(60);
 
     const getOtp = async (resend = false) => {
-      if (!showOtpInput.value || resend) {
+      if (!showOtpInput.value || (resend && interval.value <= 0)) {
         await fetch('https://niobooks.in/api/web/request_otp', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json', Client: 'web' },
@@ -79,7 +82,17 @@ export default {
         });
         message.value = 'Login';
         showOtpInput.value = true;
-      } else {
+        if (resend) {
+          interval.value = 60;
+        }
+        const intervalTimer = () => {
+          interval.value = interval.value - 1;
+          if (interval.value <= 0) {
+            clearInterval(counter);
+          }
+        };
+        const counter = setInterval(intervalTimer, 1000);
+      } else if (!resend) {
         authenticateOtp();
       }
     };
@@ -104,6 +117,7 @@ export default {
       data,
       message,
       showOtpInput,
+      interval,
       getOtp
     };
   }
@@ -113,6 +127,9 @@ export default {
 <style>
 .orange-background {
   background-color: #ff8c00;
+}
+.resend-btn {
+  cursor: pointer;
 }
 .light-orange {
   padding-left: 100px;

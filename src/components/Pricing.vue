@@ -24,7 +24,13 @@
           <h3>Now try all benefits of My BillBook app</h3>
           <h3 class="orange">Free for 14 days</h3>
         </div>
-        <div class="pb-3"><img src="" height="100" alt="money logo" /></div>
+        <div class="pb-3 money-logo">
+          <img
+            src="https://us.123rf.com/450wm/dhakadesignhouse/dhakadesignhouse2007/dhakadesignhouse200700524/152736731-powerful-trustworthy-30-day-money-back-guaranteed-gold-badge-seal-stamp-label-isolated-on-white-back.jpg"
+            height="200"
+            alt="money logo"
+          />
+        </div>
       </div>
     </div>
     <div class="d-flex mb-3 mx-5">
@@ -40,8 +46,8 @@
         <p><span class="fa fa-lg fa-check text-success"></span> Only Mobile device supported</p>
         <p><span class="fa fa-lg fa-check text-success"></span> + 5 more features</p>
       </div>
-      <div class="card mb-4 col-4 rounded-3 shadow-sm px-2 border-warning">
-        <div class="popular"><h1 class="h6 populartag">Most Popular</h1></div>
+      <div class="card mb-4 col-4 rounded-3 shadow-sm px-2 border-warning gold-background2">
+        <div class="popular"><p class="populartag">Most Popular</p></div>
         <span class="h1 gold">✷</span>
         <h1 class="h5">Gold Plan</h1>
         <div><del>₹ 2599 </del><span class="h2 gold">₹ 1799</span><span>/year</span></div>
@@ -138,6 +144,9 @@ html {
   }
 }
 
+.money-logo {
+  margin-top: -10px;
+}
 .orange {
   color: #ff8c00;
 }
@@ -175,6 +184,9 @@ html {
 }
 .gold-background {
   background-color: #fff3cf;
+}
+.gold-background2 {
+  background-color: rgba(255, 243, 207, 0.4);
 }
 .diamond {
   color: #ff4545;
@@ -220,9 +232,9 @@ html {
   border-radius: 15%/75%;
   height: 26px;
   position: relative;
-
+  font-size: 14px;
   text-align: center;
-  padding-top: 3px;
+  padding-top: 2px;
   color: #fff;
 }
 </style>
