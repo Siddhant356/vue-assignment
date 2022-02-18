@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="d-flex w-100 justify-content-between py-5 px-5">
+    <div class="d-flex justify-content-between py-5 px-5">
       <div>
         <h1 class="orange">1,00,000+</h1>
         <h6>Businesses Trust us</h6>

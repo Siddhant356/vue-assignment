@@ -2,16 +2,16 @@
   <Nav />
   <div class="light-orange">
     <div class="row">
-      <div class="col-9">
+      <div class="col-8">
         <h1 class="h3 mb-3">Simple GST Billing & Stock Management</h1>
         <h1 class="h3 mb-3 fw-normal">Software for your business</h1>
         <br />
         <h1 class="h5 mb-3 fw-normal">Atma Nirbhar Vyapaari bane</h1>
       </div>
-      <div class="card col-3">
+      <div class="card col-4 card-design">
         <form @submit.prevent="getOtp(false)" class="p-3">
           <h1 class="h4 mb-3 fw-normal text-muted">Login to myBillBook</h1>
-          <div class="form-group w-100">
+          <div class="form-group">
             <label for="basic-addon1">Enter Mobile Number</label>
             <div class="input-group mb-4">
               <div class="input-group-prepend">
@@ -31,7 +31,7 @@
             </div>
           </div>
 
-          <div v-if="showOtpInput" class="form-group w-100">
+          <div v-if="showOtpInput" class="form-group">
             <label for="basic-addon2">Enter OTP</label>
             <div class="input-group">
               <input v-model="data.otp_code" type="number" class="form-control" aria-label="OTP" aria-describedby="basic-addon2" required />
@@ -42,7 +42,7 @@
         </form>
       </div>
     </div>
-    <div>
+    <div class="iso-logo">
       Made with ❤️ in India &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
         ><img src="https://mybillbook.in/static-assets/images/landing-page/iso-black.webp" alt="iso logo"
       /></span>
@@ -139,8 +139,13 @@ export default {
 
   background-color: #fff9f0;
 }
+.iso-logo {
+  padding-top: 80px;
+}
 .marker {
   height: 4px;
   width: 15%;
+}
+.card-design {
 }
 </style>
