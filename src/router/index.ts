@@ -33,8 +33,8 @@ import CreateTable from '@/views/CreateTable.vue'
 
 
 const routes: Array<RouteRecordRaw> = [
-  { path: '/', name: 'login', component: Login, },
-  { path: '/createTable', name: 'createTable', component: CreateTable },
+  { path: '/', name: 'login', component: Login, meta: { auth: false } },
+  { path: '/createTable', name: 'createTable', component: CreateTable, meta: { auth: true } },
   {
     path: '/:catchAll(.*)', redirect: () => {
       if (localStorage.getItem('login')) {
@@ -51,21 +51,28 @@ const router = createRouter({
   routes
 })
 
-router.beforeEach((to, from) => {
+router.beforeEach((to, from, next) => {
   let isAuthenticated = false;
   if (localStorage.getItem('login'))
     isAuthenticated = true;
   else
     isAuthenticated = false;
 
-  if ((to.path == '/' && !isAuthenticated) || (to.path == '/createTable' && isAuthenticated)) {
-    return true;
-  }
-  else if ((to.path == '/createTable' && !isAuthenticated) || (to.path == '/' && isAuthenticated)) {
-    return false;
-  }
-  else {
-    return false;
+  // if ((to.path == '/' && !isAuthenticated) || (to.path == '/createTable' && isAuthenticated)) {
+  //   return true;
+  // }
+  // else if ((to.path == '/createTable' && !isAuthenticated) || (to.path == '/' && isAuthenticated)) {
+  //   return false;
+  // }
+  // else {
+  //   return false;
+  // }
+  if (to.meta.auth && !isAuthenticated) {
+    next('/');
+  } else if (!to.meta.auth && isAuthenticated) {
+    next('/createTable');
+  } else {
+    next();
   }
 })
 
