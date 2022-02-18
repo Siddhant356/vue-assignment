@@ -34,40 +34,37 @@
       </div>
     </div>
     <div class="d-flex mb-3 mx-5">
-      <div class="card mb-4 col-4 rounded-3 shadow-sm px-2 mx-2">
-        <span class="h1 silver">✷</span>
-        <h1 class="h5">Silver Plan</h1>
-        <div><del>₹ 1299 </del><span class="h2 silver">₹ 799</span><span>/year</span></div>
+      <div class="card mb-4 col-4 rounded-3 shadow-sm mx-2">
+        <span class="h1 px-2 silver">✷</span>
+        <h1 class="h5 px-2">Silver Plan</h1>
+        <div class="px-2"><del>₹ 1299 </del><span class="h2 silver">₹ 799</span><span>/year</span></div>
         <div class="text-center h6 p-2 mt-2 silver silver-background">Mobile+Desktop</div>
 
-        <p><span class="fa fa-lg fa-check text-success"></span> Unlimited Stock Adustments</p>
-        <p><span class="fa fa-lg fa-check text-success"></span> GST Reports, Profit &amp; Loss Report</p>
-        <p><span class="fa fa-lg fa-check text-success"></span> Remove MyBillBook logo from Invoice</p>
-        <p><span class="fa fa-lg fa-check text-success"></span> Only Mobile device supported</p>
-        <p><span class="fa fa-lg fa-check text-success"></span> + 5 more features</p>
+        <p class="px-2"><span class="fa fa-lg fa-check text-success"></span> Unlimited Stock Adustments</p>
+        <p class="px-2"><span class="fa fa-lg fa-check text-success"></span> GST Reports, Profit &amp; Loss Report</p>
+        <p class="px-2"><span class="fa fa-lg fa-check text-success"></span> Remove MyBillBook logo from Invoice</p>
+        <p class="px-2"><span class="fa fa-lg fa-check text-success"></span> Only Mobile device supported</p>
+        <p class="px-2"><span class="fa fa-lg fa-check text-success"></span> + 5 more features</p>
       </div>
-      <div class="card mb-4 col-4 rounded-3 shadow-sm px-2 border-warning gold-background2">
+      <div class="card mb-4 col-4 rounded-3 shadow-sm border-warning gold-background2">
         <div class="popular"><p class="populartag">Most Popular</p></div>
-        <span class="h1 gold">✷</span>
-        <h1 class="h5">Gold Plan</h1>
-        <div><del>₹ 2599 </del><span class="h2 gold">₹ 1799</span><span>/year</span></div>
+        <span class="h1 gold px-2">✷</span>
+        <h1 class="h5 px-2">Gold Plan</h1>
+        <div class="px-2"><del>₹ 2599 </del><span class="h2 gold">₹ 1799</span><span>/year</span></div>
         <div class="text-center h6 p-2 mt-2 gold gold-background">Mobile+Desktop</div>
 
-        <p><span class="fa fa-lg fa-check text-success"></span> All Silver Feature</p>
-        <p><span class="fa fa-lg fa-check text-success"></span> Add <b>upto 5 Staff</b> to My BillBook</p>
-        <p><span class="fa fa-lg fa-check text-success"></span> Unlimted Mobile + Desktop Logins</p>
+        <p class="px-2"><span class="fa fa-lg fa-check text-success"></span> All Silver Feature</p>
+        <p class="px-2"><span class="fa fa-lg fa-check text-success"></span> Add <b>upto 5 Staff</b> to My BillBook</p>
+        <p class="px-2"><span class="fa fa-lg fa-check text-success"></span> Unlimted Mobile + Desktop Logins</p>
       </div>
-      <div class="card mb-4 col-4 rounded-3 shadow-sm px-2 mx-2">
-        <span class="h1 diamond">✷</span>
-        <h1 class="h5">Silver Plan</h1>
-        <div><del>₹ 1299 </del><span class="h2 diamond">₹ 799</span><span>/year</span></div>
+      <div class="card mb-4 col-4 rounded-3 shadow-sm mx-2">
+        <span class="h1 diamond px-2">✷</span>
+        <h1 class="h5 px-2">Diamond Plan</h1>
+        <div class="px-2"><del>₹ 4599 </del><span class="h2 diamond">₹ 3500</span><span>/year</span></div>
         <div class="text-center h6 p-2 mt-2 diamond diamond-background">Mobile+Desktop</div>
 
-        <p><span class="fa fa-lg fa-check text-success"></span> Unlimited Stock Adustments</p>
-        <p><span class="fa fa-lg fa-check text-success"></span> GST Reports, Profit &amp; Loss Report</p>
-        <p><span class="fa fa-lg fa-check text-success"></span> Remove MyBillBook logo from Invoice</p>
-        <p><span class="fa fa-lg fa-check text-success"></span> Only Mobile device supported</p>
-        <p><span class="fa fa-lg fa-check text-success"></span> + 5 more features</p>
+        <p class="px-2"><span class="fa fa-lg fa-check text-success"></span>All Gold & Silver Feature</p>
+        <p class="px-2"><span class="fa fa-lg fa-check text-success"></span>Add <b>unlimited staff to My BillBook</b></p>
       </div>
     </div>
   </main>

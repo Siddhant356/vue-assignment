@@ -20,7 +20,7 @@
               </tr>
             </thead>
             <tbody class="">
-              <tr class="justify-content-around white" v-for="(item, index) in searchItems" :key="item.id" v-on:click="updateCell(index, item)">
+              <tr class="justify-content-around white pointer" v-for="(item, index) in searchItems" :key="item.id" v-on:click="updateCell(index, item)">
                 <td>{{ item.itemName }}</td>
                 <td>{{ item.itemCode }}</td>
                 <td>₹ {{ item.sellingPrice }}</td>

@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-md">
     <div class="container-fluid mx-3">
-      <h1 class="h4 fw-normal">638772765</h1>
+      <h1 class="h4 fw-normal">{{ mobile_number }}</h1>
       <div>
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
@@ -23,6 +23,7 @@ export default {
     const store = useStore();
     const router = useRouter();
     const loginInfo = ref({});
+    const mobile_number = ref('');
 
     const logout = async () => {
       localStorage.removeItem('items');
@@ -33,10 +34,12 @@ export default {
     onMounted(() => {
       if (localStorage.login) {
         loginInfo.value = JSON.parse(localStorage.getItem('login') || '{}');
+        mobile_number.value = loginInfo.value.mobile_number;
       }
     });
     return {
-      logout
+      logout,
+      mobile_number
     };
   }
 };
