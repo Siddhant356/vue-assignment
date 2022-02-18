@@ -1,7 +1,7 @@
 <template>
   <Nav />
   <div class="light-orange">
-    <div class="row">
+    <div class="d-flex p-5">
       <div class="col-8">
         <h1 class="h3 mb-3">Simple GST Billing & Stock Management</h1>
         <h1 class="h3 mb-3 fw-normal">Software for your business</h1>
@@ -9,7 +9,7 @@
         <h1 class="h5 mb-3 fw-normal">Atma Nirbhar Vyapaari bane</h1>
       </div>
       <div class="card col-4 card-design">
-        <form @submit.prevent="getOtp(false)" class="p-3">
+        <form @submit.prevent="getOtp(false)" class="p-5">
           <h1 class="h4 mb-3 fw-normal text-muted">Login to myBillBook</h1>
           <div class="form-group">
             <label for="basic-addon1">Enter Mobile Number</label>
@@ -38,7 +38,7 @@
             </div>
             <label class="text-muted mb-3 resend-btn" @click="getOtp(true)">Resend OTP in {{ interval }} sec</label>
           </div>
-          <button class="w-100 btn btn-lg btn-primary" type="submit">{{ message }}</button>
+          <button class="w-100 btn btn-primary" type="submit">{{ message }}</button>
         </form>
       </div>
     </div>
@@ -147,5 +147,7 @@ export default {
   width: 15%;
 }
 .card-design {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 13%);
 }
 </style>

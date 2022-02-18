@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="pricing">
     <div class="d-flex justify-content-between py-5 px-5">
       <div>
         <h1 class="orange">1,00,000+</h1>
@@ -69,7 +69,7 @@
     </div>
   </main>
 
-  <footer class="pt-4 my-md-5 pt-md-5 mx-5">
+  <footer class="pt-4 my-md-5 pt-md-5 mx-5 pricing">
     <div class="d-flex">
       <div class="d-flex w-100 justify-content-between py-5">
         <div>
@@ -147,7 +147,11 @@ html {
 .orange {
   color: #ff8c00;
 }
-
+.pricing {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+}
 .container {
   max-width: 960px;
 }
